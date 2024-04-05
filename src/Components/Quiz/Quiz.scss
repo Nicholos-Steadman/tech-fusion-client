@@ -1,0 +1,85 @@
+.quiz {
+  padding: 0 1rem;
+  display: flex;
+  justify-content: start;
+  gap: 1rem;
+  align-items: center;
+  &__back-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    padding: 4rem 1rem;
+    margin: 1rem;
+    margin-top: 3rem;
+    border-radius: 12px;
+
+  }
+  &__question-container{
+    height: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;  }
+  &__question{
+    height: 3rem;
+    width: 80%;
+    display: flex;
+    color: grey;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+    font-size: 1.25rem;
+
+  }
+    &__answers {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      text-wrap: nowrap;
+      border: 2px solid black;
+      align-items: center;
+      border-radius: 4px;
+    }
+    &__answer{
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        height: 3rem;
+        align-items: center;
+        justify-content: start;
+
+        &--underline{
+        border-bottom: 1px solid black;
+        }
+    }
+    &__answer-inner{
+        width: 60%;
+        display: flex;
+        justify-content: start;
+        gap: 0.5rem;
+        padding-left: .75rem;
+    }
+    &__button{
+        background-color: black;
+        width: 80%;
+        color: white;
+        margin-top: 1rem;
+        padding: 1rem;
+        border-radius: 8px;
+    }
+    &__button-back{
+        background-color: white;
+        width: 80%;
+        color: black;
+        margin-top: 1rem;
+        padding: 1rem;
+        border-radius: 8px;
+
+    }
+  
+}
