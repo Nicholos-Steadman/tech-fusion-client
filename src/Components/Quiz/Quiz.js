@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "./Quiz.scss";
 
 function Quiz({
+  setSelectedTags,
   quizPage,
   setQuizPage,
   question,
@@ -21,6 +22,7 @@ function Quiz({
 
   function handleRadioChange(event) {
     setSelectedAnswer(event.target.value);
+
   }
 
   function handleSubmit(event) {
@@ -28,6 +30,8 @@ function Quiz({
     const pageTwo = "/quiz/two";
     const pageThree = "/quiz/three";
     event.preventDefault();
+    setSelectedTags(selectedAnswer)
+    
     console.log(selectedAnswer);
     // if (!quizPage) {
     //   setQuizPage(pageTwo);

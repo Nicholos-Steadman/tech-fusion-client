@@ -8,10 +8,10 @@ const answerThree = 'Air-purifying properties'
 const tagOne = "snake"
 const tagTwo = "low maintenence"
 const tagThree = "air purifying"
-function QuizOne({ quizPage, setQuizPage}) {
+function QuizOne({setSelectedTags, quizPage, setQuizPage}) {
   return (
     <div>
-      <Quiz nextQ={"/quiz/two"}  quizPage={quizPage} setQuizPage={setQuizPage} question={question} answerOne={answerOne} answerTwo={answerTwo} answerThree={answerThree} tagOne={tagOne} tagTwo={tagTwo} tagThree={tagThree}/>
+      <Quiz nextQ={"/quiz/two"} setSelectedTags={setSelectedTags}  quizPage={quizPage} setQuizPage={setQuizPage} question={question} answerOne={answerOne} answerTwo={answerTwo} answerThree={answerThree} tagOne={tagOne} tagTwo={tagTwo} tagThree={tagThree}/>
     </div>
   )
 }
