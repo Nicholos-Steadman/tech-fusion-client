@@ -5,10 +5,13 @@ in your purchase decision?`
 const answerOne = 'Flowering period'
 const answerTwo = 'Low maintenance'
 const answerThree = 'Air-purifying properties'
-function QuizOne() {
+const tagOne = "snake"
+const tagTwo = "low maintenence"
+const tagThree = "air purifying"
+function QuizOne({ quizPage, setQuizPage}) {
   return (
     <div>
-      <Quiz question={question} answerOne={answerOne} answerTwo={answerTwo} answerThree={answerThree}/>
+      <Quiz nextQ={"/quiz/two"}  quizPage={quizPage} setQuizPage={setQuizPage} question={question} answerOne={answerOne} answerTwo={answerTwo} answerThree={answerThree} tagOne={tagOne} tagTwo={tagTwo} tagThree={tagThree}/>
     </div>
   )
 }
