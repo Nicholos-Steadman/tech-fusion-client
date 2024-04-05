@@ -17,9 +17,9 @@ function Header() {
                     </Link>
                 </div>
 
-                <Link to="/profile">
+                <Link className="nav__profile-avatar" to="/profile">
                     <p className="nav__profile">
-                        K
+                           K
                     </p>
                 </Link>
             </nav>

@@ -1,5 +1,6 @@
 import "./Account.scss"
 import avatar from "../../assets/images/avatar.png"
+import { Link } from "react-router-dom";
 
 function Account() {
     return (
@@ -11,7 +12,9 @@ function Account() {
                     Welcome back Kathy!
                 </h2>
                 <p className="account__text">Complete your preference quiz now to tailor the app to your needs.</p>
-                <button className="account__button">Begin Quiz Now</button>
+                <Link to="/quiz/one">
+                    <button className="account__button">Begin Quiz Now</button>
+                </Link>
             </div>
 
             <section className="logout">
@@ -26,6 +29,15 @@ function Account() {
                 <p className="dashboard__text">Account details</p>
                 <p className="dashboard__text">Wishlist</p>
             </section>
+
+            <footer className="dashboard__footer">
+                <p>
+                    From your account dashboard you can view your recent orders, manage your shipping and billing addresses, and edit your password and account details.
+                </p>
+            </footer>
+
+
+
         </main>
     )
 }

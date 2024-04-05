@@ -1,7 +1,7 @@
 @use "../../partials/variables" as *;
 
 .main {
-    padding: 1rem 2rem 0rem 2rem;
+    padding: 1rem 2rem 1rem 2rem;
 
     &__container {
         display: flex;
@@ -12,12 +12,13 @@
         border-radius: 4px;
         padding: 1rem;
         background-color: grayscale($color: #eee7e7);
-       
+
     }
+
     &__heading {
         margin: 0;
         font-size: 24px;
-    
+
     }
 
     &__button {
@@ -26,4 +27,13 @@
         padding: 0.5rem;
         border-radius: 4px;
     }
+}
+
+.card-container {
+    padding: 1rem 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 }
