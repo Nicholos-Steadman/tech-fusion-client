@@ -36,6 +36,11 @@
     font-size: 1.25rem;
 
   }
+
+  &__profile-link {
+    text-decoration: none;
+    color: black;
+  }
     &__answers {
       display: flex;
       flex-direction: column;
