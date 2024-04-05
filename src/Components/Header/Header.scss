@@ -1,0 +1,19 @@
+
+
+.nav {
+    padding: 1rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+&__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+    &__image {
+        width: 24px;
+        height: 24px;
+        padding-right: 1rem;
+    }
+}
