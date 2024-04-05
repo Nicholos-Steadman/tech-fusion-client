@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import img from "../../assets/icons/arrow_back_black_24dp.svg";
 import quizPic from "../../assets/images/quiz-image.png";
 import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+
 import "./Quiz.scss";
 
 function Quiz({
@@ -15,23 +17,53 @@ function Quiz({
   tagOne,
   tagTwo,
   tagThree,
-  nextQ
+  nextQ,
 }) {
+  const url = "http://localhost:8080/answers";
+  const [newAnswer, setNewAnswer] = useState("");
+  useEffect(() => {
+    const getAnswers = async () => {
+      try {
+        const response = await axios.get(`${url}`);
+        const answers = response.data;
+        setNewAnswer(answers);
+        console.log(answers);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    getAnswers();
+  }, []);
+
   const navigate = useNavigate();
-  const [selectedAnswer, setSelectedAnswer] = useState("");
+  const [selectedAnswer, setSelectedAnswer] = useState("hello");
 
   function handleRadioChange(event) {
     setSelectedAnswer(event.target.value);
-
+    console.log(event.target.value);
   }
 
   function handleSubmit(event) {
+    event.preventDefault();
+    console.log(selectedAnswer);
+    axios
+      .put(url, {
+        answer: selectedAnswer,
+      })
+      .then((response) => {
+        // Handle success
+        console.log("PUT request successful:", response.data);
+      })
+      .catch((error) => {
+        // Handle error
+        console.error("Error making PUT request:", error);
+      });
     const pageOne = "/quiz/one";
     const pageTwo = "/quiz/two";
     const pageThree = "/quiz/three";
-    event.preventDefault();
-    setSelectedTags(selectedAnswer)
-    
+
+    setSelectedTags(selectedAnswer);
+
     console.log(selectedAnswer);
     // if (!quizPage) {
     //   setQuizPage(pageTwo);

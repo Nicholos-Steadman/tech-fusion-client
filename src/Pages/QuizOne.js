@@ -5,9 +5,9 @@ in your purchase decision?`
 const answerOne = 'Flowering period'
 const answerTwo = 'Low maintenance'
 const answerThree = 'Air-purifying properties'
-const tagOne = "snake"
-const tagTwo = "low maintenence"
-const tagThree = "air purifying"
+const tagOne = "indoor"
+const tagTwo = "hybrid"
+const tagThree = "outdoor"
 function QuizOne({setSelectedTags, quizPage, setQuizPage}) {
   return (
     <div>

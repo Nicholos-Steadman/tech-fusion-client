@@ -33,12 +33,12 @@ function App() {
           />
           <Route
             path="/quiz/two"
-            element={<QuizTwo quizPage={quizPage} setQuizPage={setQuizPage} />}
+            element={<QuizTwo setSelectedTags={setSelectedTags} quizPage={quizPage} setQuizPage={setQuizPage} />}
           />
           <Route
             path="/quiz/three"
             element={
-              <QuizThree quizPage={quizPage} setQuizPage={setQuizPage} />
+              <QuizThree setSelectedTags={setSelectedTags} quizPage={quizPage} setQuizPage={setQuizPage} />
             }
           />
         </Routes>

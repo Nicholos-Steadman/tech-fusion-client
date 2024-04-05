@@ -1,8 +1,18 @@
 import "./Account.scss"
 import avatar from "../../assets/images/avatar.png"
 import { Link } from "react-router-dom";
+import  axios  from "axios";
 
 function Account() {
+    const deletePrev = async ()=>{
+        try{
+            await axios.delete("http://localhost:8080/answers")
+
+        }catch(error){
+            console.error(error)
+        }
+
+    }
     return (
         <main className="account">
             <h1 className="account__heading">Account</h1>
@@ -13,7 +23,7 @@ function Account() {
                 </h2>
                 <p className="account__text">Complete your preference quiz now to tailor the app to your needs.</p>
                 <Link to="/quiz/one">
-                    <button className="account__button">Begin Quiz Now</button>
+                    <button onClick={deletePrev} className="account__button">Begin Quiz Now</button>
                 </Link>
             </div>
 
