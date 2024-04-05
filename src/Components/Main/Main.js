@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Main.scss"
 
 function Main() {
@@ -8,7 +9,9 @@ function Main() {
                 Begin customizing your experience!
             </h1>
             <p className="main__text">Complete your preference quiz now to tailor the app to your needs.</p>
-            <button className="main__button">Start Now</button>
+            <Link to="/profile">
+            <button  className="main__button">Start Now</button>
+            </Link>
         </div>
         </main>
     )

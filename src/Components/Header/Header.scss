@@ -2,19 +2,25 @@
 
 .nav {
     padding: 1rem;
-display: flex;
-justify-content: space-between;
-align-items: center;
-
-&__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     &__image {
         width: 24px;
         height: 24px;
         padding-right: 1rem;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: black;
     }
 
     &__profile {
@@ -23,7 +29,7 @@ align-items: center;
         max-width: 32px;
         max-height: 32px;
         border-radius: 50%;
-       align-content: center;
+        align-content: center;
         background-color: $primary-black;
         color: white
     }
