@@ -8,10 +8,10 @@ function Main() {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-      fetch("http://localhost:8080/products")
-        .then((response) => response.json())
-        .then((data) => setProducts(data))
-        .catch((error) => console.error("Error fetching data:", error));
+        fetch("http://localhost:8080/products")
+            .then((response) => response.json())
+            .then((data) => setProducts(data))
+            .catch((error) => console.error("Error fetching data:", error));
     }, []);
 
     return (
@@ -30,6 +30,10 @@ function Main() {
                 {products.slice(0, 6).map((product) => (
                     <Card key={product.id} productData={product} />
                 ))}
+            </div>
+
+            <div className="tap-container">
+                <p className="tap">Tap for more Items</p>
             </div>
         </main>
     )
