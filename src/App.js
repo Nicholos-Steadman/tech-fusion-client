@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './Pages/Home';
 import QuizOne from './Pages/QuizOne';
 import QuizTwo from './Pages/QuizTwo';
+import Profile from './Pages/Profile';
 // const url = "http://localhost:8080/";
 
 
@@ -17,6 +18,11 @@ function App() {
       
       </Routes>
 </BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+<Route path="/profile" element={<Profile />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

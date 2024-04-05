@@ -1,4 +1,4 @@
-
+@use "../../partials/variables" as *;
 
 .nav {
     padding: 1rem;
@@ -15,5 +15,16 @@ align-items: center;
         width: 24px;
         height: 24px;
         padding-right: 1rem;
+    }
+
+    &__profile {
+        width: 10vw;
+        height: 10vw;
+        max-width: 32px;
+        max-height: 32px;
+        border-radius: 50%;
+       align-content: center;
+        background-color: $primary-black;
+        color: white
     }
 }
