@@ -18,7 +18,12 @@
     &__heading {
         margin: 0;
         font-size: 24px;
+        color: $primary-black;
 
+    }
+
+    &__text {
+        color: $primary-black;
     }
 
     &__button {
