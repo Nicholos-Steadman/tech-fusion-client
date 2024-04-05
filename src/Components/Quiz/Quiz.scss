@@ -1,0 +1,55 @@
+.quiz {
+  padding: 0 1rem;
+  display: flex;
+  justify-content: start;
+  gap: 1rem;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    padding: 4rem 1rem;
+    margin: 1rem;
+    margin-top: 3rem;
+
+  }
+    &__answers {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      text-wrap: nowrap;
+      border: 2px solid black;
+      align-items: center;
+    }
+    &__answer{
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        height: 3rem;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid black;
+    }
+    &__answer-inner{
+        width: 60%;
+        display: flex;
+        justify-content: start;
+        gap: 0.5rem;
+    }
+    &__button{
+        background-color: black;
+        width: 100%;
+        color: white;
+        margin-top: 1rem;
+        padding: .5rem;
+    }
+    &__button-back{
+        background-color: lightgrey;
+        width: 100%;
+        color: black;
+        margin-top: 1rem;
+        padding: .5rem;
+    }
+  
+}
